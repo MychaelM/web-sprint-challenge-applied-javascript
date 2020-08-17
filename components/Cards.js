@@ -40,7 +40,7 @@ const cards = document.querySelector('.cards-container');
 axios
   .get(`https://lambda-times-api.herokuapp.com/articles`)
   .then((res) => {
-    let articleTopics = ['javascript', 'bootstrap', 'technology', 'jquery', 'node'];
+    // let articleTopics = ['javascript', 'bootstrap', 'technology', 'jquery', 'node'];
     // console.log(res)
     let jsArticles = res.data.articles.javascript;
     let bootstrap = res.data.articles.bootstrap;
@@ -71,7 +71,7 @@ axios
     console.log('Error: ', err);
   })
 
-function createCard(obj, topic) {
+function createCard(obj) {
   // create elements
   const card = document.createElement('div');
   const headline = document.createElement('div');

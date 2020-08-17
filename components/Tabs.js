@@ -33,5 +33,16 @@ axios
 
     topic.textContent = data;
 
+    // topic.addEventListener('click', (e) => {
+    //   // console.log(e.target.textContent);
+    //   // let topic = e.target.textContent;
+    //   axios
+    //     .get(`https://lambda-times-api.herokuapp.com/articles`)
+    //     .then((res) => {
+    //       console.log(res.data.articles);
+    //     })
+    // })
+
+
     return topic;
   }
