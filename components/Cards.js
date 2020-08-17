@@ -105,7 +105,7 @@ function createCard(obj) {
 
   addEventListener
   card.addEventListener('click', () => {
-    console.log(card.textContent);
+    console.log(headline.textContent);
   })
 
   return card;
