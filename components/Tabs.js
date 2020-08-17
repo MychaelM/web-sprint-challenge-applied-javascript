@@ -16,7 +16,8 @@ const topics = document.querySelector('.topics');
 axios
   .get(`https://lambda-times-api.herokuapp.com/topics`)
   .then((res) => {
-    console.log(res);
+    // console.log(res);
+    topics.appendChild(Topic('All'));
     res.data.topics.map((e) => {
       topics.appendChild(Topic(e));
     })
