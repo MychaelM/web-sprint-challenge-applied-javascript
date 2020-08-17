@@ -41,12 +41,30 @@ axios
   .get(`https://lambda-times-api.herokuapp.com/articles`)
   .then((res) => {
     let articleTopics = ['javascript', 'bootstrap', 'technology', 'jquery', 'node'];
-    console.log(res)
-    let articles = res.data.articles.javascript;
-    console.log(articles);
-    articles.map((e) => {
-    cards.appendChild(createCard(e));
-    })
+    // console.log(res)
+    let jsArticles = res.data.articles.javascript;
+    let bootstrap = res.data.articles.bootstrap;
+    let technology = res.data.articles.technology;
+    let jquery = res.data.articles.jquery;
+    let node = res.data.articles.node;
+    // console.log(articles);
+    jsArticles.map((e) => {
+      cards.appendChild(createCard(e));
+    });
+    bootstrap.map((e) => {
+      cards.appendChild(createCard(e));
+    });
+    technology.map((e) => {
+      cards.appendChild(createCard(e));
+    });
+    jquery.map((e) => {
+      cards.appendChild(createCard(e));
+    });
+    node.map((e) => {
+      cards.appendChild(createCard(e));
+    });
+
+    
 
   })
   .catch((err) => {
