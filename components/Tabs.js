@@ -10,6 +10,8 @@
 //
 // NOTE: you do _not_ need to install axios as it's included in the HTML via script element
 
+// let topicState;
+
 // select div.topics
 const topics = document.querySelector('.topics');
 
@@ -34,13 +36,14 @@ axios
     topic.textContent = data;
 
     // topic.addEventListener('click', (e) => {
-    //   // console.log(e.target.textContent);
-    //   // let topic = e.target.textContent;
-    //   axios
-    //     .get(`https://lambda-times-api.herokuapp.com/articles`)
-    //     .then((res) => {
-    //       console.log(res.data.articles);
-    //     })
+    //   console.log(e.target.textContent);
+    //   topicState = e.target.textContent;
+    //   // axios
+    //   //   .get(`https://lambda-times-api.herokuapp.com/articles`)
+    //   //   .then((res) => {
+    //   //     console.log(res.data.articles);
+    //   //   })
+    //   return topicState;
     // })
 
 

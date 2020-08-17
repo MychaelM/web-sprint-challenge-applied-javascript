@@ -23,17 +23,20 @@
 
 // select cards-container
 const cards = document.querySelector('.cards-container');
+const errors = document.querySelector('.errors-container');
 
-// // GET topics
-// axios
-//   .get(`https://lambda-times-api.herokuapp.com/topics`)
-//   .then((res) => {
-//     let articleTopics;
-//     return articleTopics =  res.data.topics;
-//   })
-//   .catch((err) => {
-//     console.log(`Error: `, err);
-//   });
+// Setup Error
+axios
+  .get(`https://lambda-times-api.herokuapp.com/topicsss`)
+  .then((res) => {
+    console.log('This should not even work.')
+    // let articleTopics;
+    // return articleTopics =  res.data.topics;
+  })
+  .catch((err) => {
+    console.log(`Error: `, err);
+    errors.appendChild(createError(err));
+  });
 
   // GET articles
 
@@ -69,6 +72,7 @@ axios
   })
   .catch((err) => {
     console.log('Error: ', err);
+    errors.appendChild(createError(err));
   })
 
 function createCard(obj) {
@@ -107,3 +111,13 @@ function createCard(obj) {
   return card;
 }
 
+function createError(obj) {
+  const error = document.createElement('div');
+  const errorContent = document.createElement('h2');
+
+  error.appendChild(errorContent);
+
+  errorContent.textContent = `There was an issue with the request! ${obj}`;
+
+  return error;
+}
