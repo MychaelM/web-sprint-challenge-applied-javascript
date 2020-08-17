@@ -24,9 +24,24 @@
 // select cards-container
 const cards = document.querySelector('.cards-container');
 
+// // GET topics
+// axios
+//   .get(`https://lambda-times-api.herokuapp.com/topics`)
+//   .then((res) => {
+//     let articleTopics;
+//     return articleTopics =  res.data.topics;
+//   })
+//   .catch((err) => {
+//     console.log(`Error: `, err);
+//   });
+
+  // GET articles
+
 axios
   .get(`https://lambda-times-api.herokuapp.com/articles`)
   .then((res) => {
+    let articleTopics = ['javascript', 'bootstrap', 'technology', 'jquery', 'node'];
+    console.log(res)
     let articles = res.data.articles.javascript;
     console.log(articles);
     articles.map((e) => {
@@ -66,5 +81,11 @@ function createCard(obj, topic) {
   img.src = obj.authorPhoto;
   byAuthor.textContent = `By ${obj.authorName}`;
 
+  addEventListener
+  card.addEventListener('click', () => {
+    console.log(card.textContent);
+  })
+
   return card;
 }
+
