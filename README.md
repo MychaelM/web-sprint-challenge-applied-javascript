@@ -28,13 +28,23 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is the DOM?
 
+  DOM stands for 'Document Object Model'. It represents a whole web page, as a web page is an HTML document. The DOM is able to be modified using Javascript, where what is represented on the page can be changed.
+
 2. What is an event?
+
+  An event is a 'thing' that happens in or to an HTML element. Every interaction inside a site is an event, such as a click or a mouseover.
 
 3. What is an event listener?
 
+  An event listener is a way for an HTML element to recognize when a specific event occurs in relation to the element and then an action is then performed based on a callback that is set to run when the specified event occurs.
+
 4. Why would we convert a NodeList into an Array?
 
+  You would want to convert a NodeList into an Array when you needed to use Array specific methods on the NodeList data. Methods like .map() or .filter()
+
 5. What is a component?
+
+  A component is a reusable collection of HTML, CSS, and Javascript code that is used to build web pages. This makes it very easy to consistently display the structure, styling, and interactivity of a webpage without repeating code.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -62,13 +72,13 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 Your finished project must include all of the following requirements:
 
-- [ ] Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled in. DO NOT add any code to the `index.html` file itself.
+- [X] Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled in. DO NOT add any code to the `index.html` file itself.
 
-- [ ] Following the instructions in the `components/Header.js` file, create the Header.
+- [X] Following the instructions in the `components/Header.js` file, create the Header.
 
-- [ ] Following the instructions in the `components/Tabs.js` file, create the Tabs.
+- [X] Following the instructions in the `components/Tabs.js` file, create the Tabs.
 
-- [ ] Following the instructions in the `components/Cards.js` file, create the Cards.
+- [X] Following the instructions in the `components/Cards.js` file, create the Cards.
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
